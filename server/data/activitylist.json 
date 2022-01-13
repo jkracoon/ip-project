@@ -13,6 +13,7 @@
  personalitty:[extrovert]
  date: yyyy-mm-dd
  time: hh:mm
+ email:
 },
 {
  id:2,

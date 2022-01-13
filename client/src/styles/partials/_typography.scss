@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"),
+    url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"),
+    url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+// Page Header
+// @mixin heading-font {
+//   font-family: "Avenir Next Bold";
+//   font-size: 24px;
+//   line-height: 32px;
+// }
+// // hero & section title style
+// @mixin subheader-font {
+//   font-family: "Avenir Next Demi";
+//   font-size: 14px;
+//   line-height: 22px;
+// }
+
+// @mixin label-button-font {
+//   font-family: "Avenir Next Bold";
+//   font-size: 10px;
+//   line-height: 20px;
+// }
+
+// @mixin emphasis-font {
+//   font-family: "Avenir Next Demi";
+//   font-size: 14px;
+//   line-height: 22px;
+// }

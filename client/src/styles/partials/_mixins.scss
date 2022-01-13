@@ -1,0 +1,31 @@
+@use "./variables" as *;
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex($justify-content, $align-items, $flex-direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+@mixin mobile-layout {
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+@mixin tablet-layout {
+  margin: 2.25rem 2.25rem 1.5rem 2.25rem;
+}
+
+@mixin desktop-layout {
+  margin: 2.25rem 2.25rem 1.5rem 2.25rem;
+}
