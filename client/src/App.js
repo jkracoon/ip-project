@@ -1,10 +1,10 @@
 //Import node components
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import PageFooter from "./components/PageFooter/PageFooter";
-import PageHeader from "./components/PageHeader/PageHeader"
-import Activity from "./pages/Activity/Activity";
-import Personality from "./pages/Personality/Personality"
+import PageFooter from "./components/PageFooter/pagefooter";
+import PageHeader from "./components/PageHeader/pageheader"
+import Activity from "./pages/Activity/activity";
+import Personality from "./pages/Personality/personality"
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           {/* <Route path="/schedule" exact component={Schedule} />  */}
           {/* <Route path="/confirmation" exact component={Confirmation} />  */}
       </Switch>
-      <PageFooter />
+      {/* <PageFooter /> */}
     </BrowserRouter>
   );
 }

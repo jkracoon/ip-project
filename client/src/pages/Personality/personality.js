@@ -8,7 +8,8 @@ export default class Personality extends Component {
     super();
     this.state = {
       personalityData: [],
-      activity: null
+      activity: null,
+      buttonValue: null,
     };
   }
 
@@ -17,7 +18,7 @@ export default class Personality extends Component {
     const urlParams = new URLSearchParams(queryString);
     const activity = urlParams.get("activity");
 
-    this.setState ({ activity: activity})
+    this.setState({ activity: activity });
 
     console.log(activity);
 
@@ -32,6 +33,13 @@ export default class Personality extends Component {
       });
   }
 
+  personalityTarget = (e) => {
+    e.preventDefault();
+    const buttonValue = e.target.value;
+    this.setState({ buttonValue: e.target.value });
+    console.log(buttonValue);
+  };
+
   render() {
     return (
       <div className="personality">
@@ -39,16 +47,24 @@ export default class Personality extends Component {
         <div className="personality__list">
           {this.state.personalityData.map((element) => {
             return (
-              <Link
-                to={`/schedule?activity=${this.state.activity}&personality=${element}`}
+              <button
+                className="personality__button"
+                value={element}
+                type="button"
+                onClick={this.personalityTarget}
               >
-                <button className="personality__button"><p className="personality__button-text">{element}</p></button>
-              </Link>
+                {element}
+              </button>
             );
           })}
         </div>
-        <button className="personality__submit">Continue > </button>
-
+        <button className="personality__submit">
+          <Link
+            to={`/schedule?activity=${this.state.activity}&&personality=${this.state.buttonValue}`}
+          >
+            Continue >
+          </Link>
+        </button>
       </div>
     );
   }
