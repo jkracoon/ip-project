@@ -4,12 +4,14 @@
   background-color: white;
   font-family: "SF Pro Display";
   height: 80vh;
+  margin-top: 1rem;
 
   &__title {
     font-family: "Arial";
     font-size: 1.5rem;
     font-weight: 400;
     padding-bottom: 1rem;
+    line-height: 1.5rem;
   }
 
   padding: 2rem 1rem;
@@ -21,8 +23,13 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    align-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
     padding: 8px 30px;
+    align-self: baseline;
   }
 
   &__button {
@@ -60,6 +67,7 @@
       cursor: pointer;
       border: none;
       font-size: 1.3rem;
+      padding-top: 1.5rem;
       background-color: white;
       color: #3493A8;
       font-weight: 400;
@@ -68,7 +76,7 @@
       margin-top: auto;
       margin-bottom: 1rem;
       display: flex;
-      width: 15rem;
+      width: 10rem;
       justify-self: flex-end;
       text-decoration: none;
       font-family: Arial, Helvetica, sans-serif;

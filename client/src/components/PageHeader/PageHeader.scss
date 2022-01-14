@@ -6,8 +6,9 @@
     background-color: #FABB51;
     width: 100%;
     padding: 1.5rem 0;
+    z-index: 2;
     height: 5.8rem;
-    box-shadow: 10px 10px 8px #888888;
+    box-shadow: 1px 3px 8px #888888;
 
     &__banner {
         height: 3.8rem;
