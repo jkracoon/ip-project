@@ -38,7 +38,11 @@ class Confirmation extends Component {
 
           <div className="btn-container">
             <div className="back-btn">
-              <p className="back-btn__text">  Go Back </p>
+              <p className="back-btn__text">
+                <Link className="goback" to="/">
+                  Go Back 
+                  </Link>
+                  </p>
             </div>
             <button className="confirm-btn">Confirm</button>
           </div>
