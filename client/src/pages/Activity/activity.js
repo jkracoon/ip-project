@@ -29,7 +29,11 @@ export default class Activity extends Component {
         <div>Activity page -1</div>
         <div>
           {this.state.activityData.map((element) => {
-            return <button className="activity__button">{element}</button>;
+            return (
+              <Link to={`/personality?activity=${element}`} >
+                <button className="activity__button">{element}</button>
+              </Link>
+            );
           })}
         </div>
       </div>

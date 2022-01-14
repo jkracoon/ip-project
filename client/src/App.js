@@ -13,7 +13,7 @@ function App() {
       <Switch>
           <Route path="/" exact component={Activity} /> 
           <Route path="/activity" exact component={Activity} /> 
-          <Route path="/user/personality" exact component={Personality} /> 
+          <Route path="/personality?activity=:activity" exact component={Personality} /> 
           {/* <Route path="/schedule" exact component={Schedule} />  */}
           {/* <Route path="/confirmation" exact component={Confirmation} />  */}
       </Switch>
