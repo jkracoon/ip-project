@@ -1,0 +1,75 @@
+.confirmation-wrapper {
+  background-color: #fabb51;
+}
+
+.inner-container {
+  border-radius: 50%;
+  width: 212px;
+  height: 212px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer-container {
+  width: 230px;
+  height: 230px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 4.5rem;
+}
+.main-container {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+.back-btn {
+  width: 148px;
+  height: 36px;
+  outline: none;
+  text-align: center;
+  padding: 0;
+
+  &__text {
+    display: inline;
+    color: white;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}
+.confirm-btn {
+  width: 148px;
+  height: 36px;
+  outline: none;
+  color: #181818;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: #fabb51;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: center;
+  margin-top: 15rem;
+}
+.img-container {
+  width: 228px;
+  height: 253.29px;
+  position: absolute;
+  top: 190px;
+
+  // background-color: white;
+}
+.image1 {
+  width: 10rem;
+}

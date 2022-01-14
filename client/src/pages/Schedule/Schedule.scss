@@ -1,0 +1,85 @@
+body {
+  box-sizing: border-box;
+}
+.schedule {
+  &-container {
+    margin: 1.5rem 1rem 1rem;
+  }
+  &-title {
+    color: #181818;
+    font-weight: 600;
+    font-size: 20px;
+    // margin-bottom: 3rem;
+  }
+  &-date-container {
+    width: 184px;
+    height: 69px;
+    border: 1px solid black;
+    border-radius: 40px;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // align-items: center;
+    // vertical-align: middle;
+  }
+  &-month {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  &-day {
+    margin-right: 0.4rem;
+    font-weight: 600;
+  }
+  &-date {
+    margin-right: 0.4rem;
+    font-weight: 600;
+  }
+  &-year {
+    font-weight: 600;
+  }
+  &-btn-container {
+    & > button {
+      display: block;
+      width: 122px;
+      height: 39px;
+      // background-color: white;
+      border: 1px solid #fabb51;
+      border-radius: 20px;
+      font-size: 17.68px;
+      //  margin-left: 100px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  &-date-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  &-date-flex {
+    display: flex;
+  }
+  &-continue-btn {
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    text-align: right;
+    color: #3493a8;
+    font-size: 20px;
+  }
+}
+.in-active{
+  background-color: grey;
+  color: white;
+
+}
+.active{
+  background-color: white;
+}
