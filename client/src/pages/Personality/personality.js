@@ -47,7 +47,7 @@ export default class Personality extends Component {
             );
           })}
         </div>
-        <button className="personality__submit">Get Started > </button>
+        <button className="personality__submit">Continue > </button>
 
       </div>
     );

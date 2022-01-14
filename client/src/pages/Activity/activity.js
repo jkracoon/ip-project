@@ -8,6 +8,7 @@ export default class Activity extends Component {
     super();
     this.state = {
       activityData: [],
+      buttonValue: null
     };
   }
 
@@ -23,6 +24,12 @@ export default class Activity extends Component {
       });
   }
 
+  activityTarget = (e) => {
+    const buttonValue = e.target.value
+    this.setState({ buttonValue: e.target.value})
+    console.log(buttonValue)
+  }
+
   render() {
     return (
       <div className="activity">
@@ -30,15 +37,21 @@ export default class Activity extends Component {
         <div className="activity__list">
           {this.state.activityData.map((element) => {
             return (
-              <Link to={`/personality?activity=${element}`}>
-                <button className="activity__button">
-                  <p className="activity__button-text">{element}</p>
-                </button>
-              </Link>
+              <button
+                className="activity__button"
+                id="buttonValue"
+                value={element}
+                type="button"
+                onClick={this.activityTarget}
+              >
+                <p className="activity__button-text">{element}</p>
+              </button>
             );
           })}
         </div>
-        <button className="activity__submit">Get Started > </button>
+        <Link to={`/personality?activity=${this.state.buttonValue}`}>
+          <div className="activity__submit">Get Started > </div>
+        </Link>
       </div>
     );
   }
