@@ -112,7 +112,7 @@ class Schedule extends Component {
             </div>
           </div>
           <div className="schedule-btn-container">
-            <button
+            <button className="schedule__button"
               value={"9:00 pm"}
               className={this.state.className[0]}
               // onClick={this.handleClick}

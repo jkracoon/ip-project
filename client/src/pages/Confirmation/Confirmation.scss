@@ -42,11 +42,12 @@
     color: white;
     margin-block-start: 0;
     margin-block-end: 0;
+    line-height: 1.8rem;
   }
 }
 .confirm-btn {
   width: 148px;
-  height: 36px;
+  height: 1.8rem;
   outline: none;
   color: #181818;
   border-radius: 20px;
@@ -60,7 +61,7 @@
   justify-content: space-between;
   align-items: center;
   vertical-align: center;
-  margin-top: 15rem;
+  margin-top: 1rem;
 }
 .img-container {
   width: 228px;
@@ -72,4 +73,23 @@
 }
 .image1 {
   width: 10rem;
+}
+
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.background{
+  &__one {
+    margin-top: -24rem;
+    width: 20rem;
+  }
+  &__two {
+    margin-top: -15rem;
+    width: 15rem;
+  }
+  
+
 }
