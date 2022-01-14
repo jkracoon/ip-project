@@ -2,3 +2,14 @@
 .body {
     background-color: cadetblue;
 }
+
+.activity {
+    background-color: cadetblue;
+
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+        margin: 1rem;
+    }
+}
