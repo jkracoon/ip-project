@@ -29,7 +29,7 @@ const findSchedule=(data,activity,personality)=>{
         schedule.push(item)
       }
     })
-   let date= schedule[0]
+   let date= schedule
    return date
 }
 
