@@ -1,18 +1,36 @@
 @font-face {
-  font-family: "Avenir Next Regular";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
-    url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"),
-    url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
-  font-weight: 400;
+    font-family: "SF Pro Display";
+    src: url("../../assets/fonts/SFPRODISPLAYREGULAR.OTF") format("otf");
+    font-weight: 200;
 }
 
 @font-face {
-  font-family: "Avenir Next Bold";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
-    url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"),
-    url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
-  font-weight: 700;
+    font-family: "SF Pro Display";
+    src: url("../../assets/fonts/SFPRODISPLAYMEDIUM.OTF") format("otf");
+    font-weight: 400;
 }
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../../assets/fonts/SFPRODISPLAYBOLD.OTF") format("otf");
+    font-weight: 700;
+}
+
+// @font-face {
+//   font-family: "Avenir Next Regular";
+//   src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
+//     url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"),
+//     url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+//   font-weight: 400;
+// }
+
+// @font-face {
+//   font-family: "Avenir Next Bold";
+//   src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
+//     url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"),
+//     url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+//   font-weight: 700;
+// }
 
 // Page Header
 // @mixin heading-font {

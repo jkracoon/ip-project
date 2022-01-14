@@ -1,0 +1,37 @@
+@use "../../styles/partials/global";
+
+
+
+.header {
+    background-color: #FABB51;
+    width: 100%;
+    padding: 1.5rem 0;
+    height: 5.8rem;
+
+    &__banner {
+        height: 3.8rem;
+        width: 100%;
+        background-color: white;
+        width: 100%;
+        border-radius: 1.5rem 1.5rem 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        height: 8.6rem;
+        max-width: 50vw;
+        padding-left: 0.7rem;
+        margin-top: -1.2rem;
+    }
+
+    &__user {
+        height: 3.2rem;
+        vertical-align: middle;
+        border-radius: 50%;
+        padding-right: 1rem;
+        margin-top: 0.3rem;
+
+    }
+}

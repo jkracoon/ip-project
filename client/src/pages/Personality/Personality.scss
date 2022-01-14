@@ -1,0 +1,71 @@
+@use "../../styles/partials/global";
+
+.personality {
+  background-color: white;
+  font-family: "SF Pro Display";
+  height: 80vh;
+
+  &__title {
+    font-family: "Arial";
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 8px 30px;
+  }
+
+  &__button {
+    margin: 1rem;
+    cursor: pointer;    
+    width: 148px;
+    height: 39px;
+    left: 20px;
+    top: 267px;
+
+    background: #ffffff;
+    border: 1px solid #f3950d;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    &:focus{
+        outline: none;
+        background-color: #FABB51
+        ;
+        box-shadow: none;
+    }
+
+    &-text {
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      margin: 0px 10px;
+      &:focus {
+          color: white;
+      }
+    }
+  }
+
+  &__submit {
+      border: none;
+      font-size: 1.5rem;
+      background-color: white;
+      color: #3493A8;
+      font-weight: 400;
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: 1rem;
+
+  }
+}
