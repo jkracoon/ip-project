@@ -26,14 +26,14 @@ const findSchedule=(data,activity,personality)=>{
    let schedule=[];
     data.forEach(item => {
       if(!schedule.includes(item.schedule) && item.activity===activity && item.personality===personality){
-        schedule.push(item.date)
+        schedule.push(item)
       }
     })
-   let date=new Date(Number(schedule[0])).toLocaleDateString("en-US")
+   let date= schedule[0]
    return date
 }
 
-// Route 1: GET /schedule?activity=[activity name] => return a list schedule based on activity
+// Route 1: GET /schedule?activity=[activity name]&& personality=[personality name] => return a list schedule based on activity
 scheduleRoute.get("/", (req, res) => {
  let data = readFile();
   let findschedule =findSchedule(data,req.query.activity,req.query.personality);
