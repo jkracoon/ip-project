@@ -57,15 +57,25 @@
   }
 
   &__submit {
-      border: none;
-      font-size: 1.5rem;
-      background-color: white;
-      color: #3493A8;
-      font-weight: 400;
-      margin-right: 0;
-      margin-left: auto;
-      margin-top: auto;
-      margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #3493A8;
+    font-weight: 400;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    width: 15rem;
+    justify-self: flex-end;
+    text-decoration: none;
 
-  }
+}
+}
+
+a:link {
+  list-style: none;
+  text-decoration: none;
 }

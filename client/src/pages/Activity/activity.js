@@ -8,7 +8,7 @@ export default class Activity extends Component {
     super();
     this.state = {
       activityData: [],
-      buttonValue: null
+      buttonValue: null,
     };
   }
 
@@ -25,10 +25,11 @@ export default class Activity extends Component {
   }
 
   activityTarget = (e) => {
-    const buttonValue = e.target.value
-    this.setState({ buttonValue: e.target.value})
-    console.log(buttonValue)
-  }
+    e.preventDefault();
+    const buttonValue = e.target.value;
+    this.setState({ buttonValue: e.target.value });
+    console.log(buttonValue);
+  };
 
   render() {
     return (
@@ -39,19 +40,20 @@ export default class Activity extends Component {
             return (
               <button
                 className="activity__button"
-                id="buttonValue"
                 value={element}
                 type="button"
                 onClick={this.activityTarget}
               >
-                <p className="activity__button-text">{element}</p>
+                {element}
               </button>
             );
           })}
         </div>
-        <Link to={`/personality?activity=${this.state.buttonValue}`}>
-          <div className="activity__submit">Get Started > </div>
-        </Link>
+        <div className="activity__submit">
+          <Link to={`/personality?activity=${this.state.buttonValue}`}>
+            Get Started >
+          </Link>
+        </div>
       </div>
     );
   }

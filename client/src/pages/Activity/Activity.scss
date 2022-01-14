@@ -59,7 +59,7 @@
   &__submit {
       cursor: pointer;
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       background-color: white;
       color: #3493A8;
       font-weight: 400;
@@ -67,6 +67,20 @@
       margin-left: auto;
       margin-top: auto;
       margin-bottom: 1rem;
+      display: flex;
+      width: 15rem;
+      justify-self: flex-end;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
 
   }
 }
+
+a:link {
+    list-style: none;
+    color: #3493A8;
+}
+
+a:visited {
+    color: #3493A8;
+  }
