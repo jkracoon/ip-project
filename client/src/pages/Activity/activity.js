@@ -26,16 +26,19 @@ export default class Activity extends Component {
   render() {
     return (
       <div className="activity">
-        <div>Activity page -1</div>
-        <div>
+        <div className="activity__title">What would you like to do?</div>
+        <div className="activity__list">
           {this.state.activityData.map((element) => {
             return (
-              <Link to={`/personality?activity=${element}`} >
-                <button className="activity__button">{element}</button>
+              <Link to={`/personality?activity=${element}`}>
+                <button className="activity__button">
+                  <p className="activity__button-text">{element}</p>
+                </button>
               </Link>
             );
           })}
         </div>
+        <button className="activity__submit">Get Started > </button>
       </div>
     );
   }

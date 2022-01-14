@@ -6,6 +6,7 @@ import PageHeader from "./components/PageHeader/PageHeader"
 import Activity from "./pages/Activity/Activity";
 import Personality from "./pages/Personality/Personality"
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,7 +14,7 @@ function App() {
       <Switch>
           <Route path="/" exact component={Activity} /> 
           <Route path="/activity" exact component={Activity} /> 
-          <Route path="/personality?activity=:activity" exact component={Personality} /> 
+          <Route path="/personality" component={Personality} /> 
           {/* <Route path="/schedule" exact component={Schedule} />  */}
           {/* <Route path="/confirmation" exact component={Confirmation} />  */}
       </Switch>
