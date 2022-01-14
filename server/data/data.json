@@ -4,7 +4,7 @@
     "name": "Manhattan",
     "activity": "Lunch",
     "personality": "Sporty",
-    "date":"1645076138000",
+    "date":"1645076138000",  
     "contact": {
       "name": "Parmin Aujla",
       "position": "Warehouse Manager",
@@ -16,7 +16,7 @@
     "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
     "name": "King West",
     "activity": "Lunch",
-    "personality": "Quiet",
+    "personality": "Sporty",
     "date":"1643920191000",
     "contact": {
       "name": "Greame Lyon",
