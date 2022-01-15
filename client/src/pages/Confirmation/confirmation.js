@@ -39,7 +39,7 @@ class Confirmation extends Component {
           <div className="btn-container">
             <div className="back-btn">
               <p className="back-btn__text">
-                <Link className="goback" to="/">
+                <Link id="goback" to="/">
                   Go Back 
                   </Link>
                   </p>

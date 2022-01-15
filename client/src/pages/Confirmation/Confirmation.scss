@@ -85,20 +85,20 @@
 .background{
   &__one {
     margin-top: -24rem;
-    width: 20rem;
+    width: 30rem;
   }
   &__two {
-    margin-top: -15rem;
+    margin-top: -16rem;
     width: 15rem;
-  }
-  
+    z-index: 2;
+  } 
 
 }
 
-.goback {
+#goback {
   color: white;
   font-size: 1rem;
-  
+
   &a:visited {
     color: white;
   }
