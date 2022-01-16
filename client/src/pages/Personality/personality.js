@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Personality.scss";
+import continueSVG from "../../assets/images/continue.svg";
 
 export default class Personality extends Component {
   constructor() {
@@ -62,7 +63,7 @@ export default class Personality extends Component {
           <Link
             to={`/schedule?activity=${this.state.activity}&&personality=${this.state.buttonValue}`}
           >
-            Continue >
+            <img src={continueSVG} alt="" />
           </Link>
         </button>
       </div>

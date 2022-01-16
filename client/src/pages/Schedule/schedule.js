@@ -1,17 +1,26 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Schedule.scss";
+import continueSVG from "../../assets/images/continue.svg";
 
 class Schedule extends Component {
   state = {
-    selectedTime: "",
+    resultData: [],
+    selectedTime: null,
     data: [],
     day: "",
     month: "",
     year: "",
     date: "",
-    className: ["active", "active", "active", "active", "active", "active"],
+    className: [
+      "in-active",
+      "in-active",
+      "in-active",
+      "in-active",
+      "in-active",
+      "in-active",
+    ],
   };
   // to get dates
   setDate = () => {
@@ -39,8 +48,8 @@ class Schedule extends Component {
       "Saturday",
     ];
     let newDate = new Date();
-    let date = newDate.getDate();
-    let day = days[newDate.getDay()];
+    let date = newDate.getDate() + 1;
+    let day = days[newDate.getDay() + 1];
     let month = months[newDate.getMonth()];
     let year = newDate.getFullYear();
     this.setState({
@@ -51,13 +60,44 @@ class Schedule extends Component {
     });
   };
 
-  // handleClick = (e) => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     selectedTime: e.target.value,
-  //   });
-  //   return e.target.value;
-  // };
+  handleClick = (e) => {
+    e.preventDefault();
+    this.setState({
+      selectedTime: e.target.value,
+    });
+    console.log(e.target.value);
+  };
+
+  getTimeArr = (arr) => {
+    const timeArr = [];
+    arr.forEach((element) => {
+      timeArr.unshift(element.date);
+    });
+    return timeArr;
+  };
+  // to set classnames to active for available times
+  setClassName = (arr, stateArr) => {
+    const btnValues = [
+      "9:00 AM",
+      "10:00 AM",
+      "11:00 AM",
+      "12:00 PM",
+      "1:00 PM",
+      "2:00 PM",
+    ];
+    arr.forEach((e) => {
+      console.log(e);
+      for (let i = 0; i < btnValues.length; i++) {
+        console.log(btnValues[i]);
+        if (btnValues[i] === e) {
+          console.log(stateArr[i]);
+          stateArr.splice(i, 1, "active");
+          console.log(stateArr);
+        }
+      }
+    });
+    return stateArr;
+  };
 
   componentDidMount() {
     const queryString = window.location.search;
@@ -65,39 +105,32 @@ class Schedule extends Component {
     const activity = urlParams.get("activity");
     const personality = urlParams.get("personality");
 
-    // dummie data
-    // const activity = "Lunch";
-    // const personality = "Sporty";
     this.setDate();
     axios
       .get(
         `http://localhost:8080/schedule?activity=${activity}&&personality=${personality}`
       )
       .then((result) => {
-        console.log(result);
+        console.log(result.data);
+
         this.setState({
-          data: result.data.date,
+          resultData: result.data,
+          data: [...new Set(this.getTimeArr(result.data))],
+          className: this.setClassName(
+            [...new Set(this.getTimeArr(result.data))],
+            this.state.className
+          ),
         });
       })
       .catch((err) => console.log(err));
-    const sampleArr = [...new Set(this.state.data)];
-    const getStateArr = (sampleArr, stateArr) => {
-      for (let i = 0; i < sampleArr.length; i++) {
-        stateArr.splice(i, 1, "active");
-      }
-    };
-    getStateArr(sampleArr, this.state.className);
   }
 
-  // componentDidUpdate(){
-  //   const filteredData=this.state.data.filter(element=>{
-  //     const timeSlot = this.handleClick();
-  //     element.date === timeSlot;
-  //   })
-  // }
-
   render() {
-    console.log(this.state.data);
+    console.log("render", this.state.className);
+    if (!this.state.resultData.length) {
+      return <p>Loading...</p>;
+    }
+
     return (
       <div className="schedule-container">
         <h1 className="schedule-title">When works for you?</h1>
@@ -112,52 +145,71 @@ class Schedule extends Component {
             </div>
           </div>
           <div className="schedule-btn-container">
-            <button className="schedule__button"
-              value={"9:00 pm"}
+            <button
+              name="btn1"
+              value={"9:00 AM"}
               className={this.state.className[0]}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
             >
               9:00 am
             </button>
             <button
-              value={"10:00 pm"}
+              name="btn2"
+              value={"10:00 AM"}
               className={this.state.className[1]}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
             >
               10:00 am
             </button>
             <button
-              value={"11:00 pm"}
+              name="btn3"
+              value={"11:00 AM"}
               className={this.state.className[2]}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
             >
               11:00 am
             </button>
             <button
-              value={"12:00 pm"}
+              name="btn4"
+              value={"12:00 PM"}
               className={this.state.className[3]}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
             >
               12:00 pm
             </button>
             <button
-              value={"1:00 pm"}
+              name="btn5"
+              value={"1:00 PM"}
               className={this.state.className[4]}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
             >
               1:00 pm
             </button>
             <button
-              value={"2:00 pm"}
+              name="btn6"
+              value={"2:00 PM"}
               className={this.state.className[5]}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
             >
               2:00 pm
             </button>
           </div>
         </div>
-        <Link to="/confirmation">
-          <div className="schedule-continue-btn">Continue ></div>
+        <Link
+          to={{
+            pathname: "/confirmation",
+            state: {
+              month: this.state.month,
+              date: this.state.date,
+              day: this.state.day,
+              year: this.state.year,
+              selectedTime: this.state.selectedTime,
+            },
+          }}
+        >
+          <div className="schedule-continue-btn">
+            <img src={continueSVG} alt="" />
+          </div>
         </Link>
       </div>
     );
