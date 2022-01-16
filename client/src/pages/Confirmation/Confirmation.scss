@@ -69,20 +69,17 @@
   height: 253.29px;
   position: absolute;
   top: 190px;
-
-  // background-color: white;
 }
 .image1 {
   width: 10rem;
 }
-
 
 .inner-container {
   display: flex;
   flex-direction: column;
 }
 
-.background{
+.background {
   &__one {
     margin-top: -24rem;
     width: 30rem;
@@ -91,8 +88,7 @@
     margin-top: -16rem;
     width: 15rem;
     z-index: 2;
-  } 
-
+  }
 }
 
 #goback {
@@ -103,4 +99,3 @@
     color: white;
   }
 }
-

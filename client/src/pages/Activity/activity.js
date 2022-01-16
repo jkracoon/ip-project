@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Activity.scss";
+import continueSVG from "../../assets/images/continue.svg";
 
 export default class Activity extends Component {
   constructor() {
@@ -51,7 +52,7 @@ export default class Activity extends Component {
         </div>
         <div className="activity__submit">
           <Link to={`/personality?activity=${this.state.buttonValue}`}>
-            Get Started >
+            <img src={continueSVG} alt="" />
           </Link>
         </div>
       </div>
